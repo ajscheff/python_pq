@@ -2,11 +2,11 @@
 
 This is a very simple implementation of a priority queue. It doesn't handle edge cases well and it certainly isn't the most efficient. It's a start.
 
-Read through the file `pq.py` and make sure you understand everything that's going on. The `simple_test()` method very simply demonstrates the purpose of a priority queue. In this queue, a lower number for priority is actually higher priority. Notice how no matter the order that we insert items into the queue, they always come out in the order "A", "B", "C".
+Read through the file `pq.py` and make sure you understand everything that's going on. The `simple_test()` method very simply demonstrates the purpose of a priority queue. In this queue, lower numbers for priority come first. Notice how no matter the order that we insert items into the queue, they always come out in the order "A", "B", "C".
 
 Below is a list of ways that we can improve the structure. Feel free to do any or all of them.
 
-## Code Cleanliness Improvements
+## Code Quality Improvements
 
 ### Override the `<` operator for Item
 
@@ -55,6 +55,12 @@ We use a standard python list as the backing data structure for this priority qu
 
 The most efficient implememntation of a priority queue is with a heap. This is a tricky structure to build, but there are a lot of examples out there. Check out this [video for a great explanation](https://www.youtube.com/watch?v=t0Cq6tVNRBA)
 
+Fun fact: Once you've done this, you've actually implemented one of the most efficient sorting algorithms out there. It's called heapsort. You can now sort numbers with world-class efficiency by inserting them all into your heap-backed priority queue and pulling them out one by one.
+
 ### Benchmark different implementations to test performance
 
-Once you've done the work to build a linked list or heap-backed priority queue, it's fun to actually demonstrate that it's faster than the list-backed one you started with. Take a test case that puts a lot of items into the queue and use `time.time()` before and after running it to measure the speed of the test. Try different priority queue implementations, different input sizes, and different usage patters (e.g. 100 inserts then 100 removes, 10 inserts then 10 removes repeated 10 times )
+Once you've done the work to build a linked list or heap-backed priority queue, it's fun to actually demonstrate that it's faster than the list-backed one you started with. Make a test case that puts a lot of items into the queue and use `time.time()` before and after running it to measure the speed of the test. Try different priority queue implementations, different input sizes, and different usage patters (e.g. 1000 inserts then 1000 removes vs. 10 inserts then 10 removes repeated 100 times )
+
+## Real world use cases
+
+Priority queues are incredibly practical structures that are used all over the place in software. Do some googling to teach yourself about a real world use case of a priority queue that's relevant to your domain.

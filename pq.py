@@ -38,6 +38,7 @@ class PriorityQueue:
 
 
 def simple_test():
+    print("Running simple test...")
     pq = PriorityQueue()
 
     pq.insert("c", 3)
@@ -47,6 +48,7 @@ def simple_test():
     assert(pq.pop() == "a")
     assert(pq.pop() == "b")
     assert(pq.pop() == "c")
+    print("Simple test passed!")
 
 
 if __name__ == "__main__":
