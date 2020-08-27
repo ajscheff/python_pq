@@ -63,4 +63,4 @@ Once you've done the work to build a linked list or heap-backed priority queue, 
 
 ## Real world use cases
 
-Priority queues are incredibly practical structures that are used all over the place in software. Do some googling to teach yourself about a real world use case of a priority queue that's relevant to your domain.
+Priority queues are incredibly practical structures that are used all over the place in software. Do some googling to teach yourself about a real world use case of a priority queue that's relevant to your domain. For example, priority queues can be used to implement Dijkstra's algorithm or for bandwidth management.
