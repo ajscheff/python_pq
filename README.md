@@ -2,7 +2,7 @@
 
 This is a very simple implementation of a priority queue. It doesn't handle edge cases well and it certainly isn't the most efficient. It's a start.
 
-Read through the file `pq.py` and make sure you understand everything that's going on. The `simple_test()` method very simply demonstrates the purpose of a priority queue. In this queue, lower numbers for priority come first. Notice how no matter the order that we insert items into the queue, they always come out in the order "A", "B", "C".
+Read through the file `pq.py` and make sure you understand everything that's going on. The `simple_test()` method very simply demonstrates the purpose of a priority queue. In this queue, lower numbers for priority come first. Run the test with `python pq.py` and notice how no matter the order that we insert items into the queue, they always come out in the order "A", "B", "C".
 
 Below is a list of ways that we can improve the structure. Feel free to do any or all of them.
 
