@@ -5,21 +5,6 @@ from .colors import colors
 from .errors import EmptyQueueException
 
 
-# class colors:
-#     RED = '\033[31m'
-#     GREEN = '\033[32m'
-#     YELLOW = "\033[33m"
-#     LIGHTGREY = "\033[37m"
-#     ENDC = '\033[0m'
-#     BOLD = '\033[1m'
-
-
-# class EmptyQueueException(Exception):
-#     def __init__(self, message):
-#         self.message = message
-#         super().__init__(colors.RED + self.message + colors.ENDC)
-
-
 class Item:
     def __init__(self, val, priority):
         self.val = val
@@ -76,38 +61,38 @@ class PriorityQueue:
         return self.storage.pop().val
 
 
-def simple_test():
-    print(colors.YELLOW + "Running simple test..." + colors.ENDC)
-    time.sleep(1)
-    pq = PriorityQueue()
+# def simple_test():
+#     print(colors.YELLOW + "Running simple test..." + colors.ENDC)
+#     time.sleep(1)
+#     pq = PriorityQueue()
 
-    pq.insert("c", 3)
-    pq.insert("a", 1)
-    pq.insert("b", 2)
+#     pq.insert("c", 3)
+#     pq.insert("a", 1)
+#     pq.insert("b", 2)
 
-    print(pq)
+#     print(pq)
 
-    assert(pq.pop() == "a")
-    assert(pq.pop() == "b")
-    assert(pq.pop() == "c")
+#     assert(pq.pop() == "a")
+#     assert(pq.pop() == "b")
+#     assert(pq.pop() == "c")
 
-    print(colors.GREEN + "Simple test passed!" + colors.ENDC)
-
-
-def error_test():
-    print(colors.YELLOW + "Running test for error handling..." + colors.ENDC)
-    time.sleep(1)
-
-    pq = PriorityQueue()
-
-    pq.insert("c", 3)
-    pq.peek()
-
-    print('hey')
+#     print(colors.GREEN + "Simple test passed!" + colors.ENDC)
 
 
-if __name__ == "__main__":
-    simple_test()
-    print("Initializing error test...")
-    time.sleep(1)
-    error_test()
+# def error_test():
+#     print(colors.YELLOW + "Running test for error handling..." + colors.ENDC)
+#     time.sleep(1)
+
+#     pq = PriorityQueue()
+
+#     pq.insert("c", 3)
+#     pq.peek()
+
+#     print('hey')
+
+
+# if __name__ == "__main__":
+#     simple_test()
+#     print("Initializing error test...")
+#     time.sleep(1)
+#     error_test()

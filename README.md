@@ -14,15 +14,6 @@ Our priority queue uses instances of the `Item` class to store values alongside 
 
 A cool feature of classes in most languages is operator overriding. This allows us to compare instances of a class directly using operators like `<`, `==`, and others. Python makes it really easy to do this. Implement a method `def __lt__(self, other):` in the class `Item`. Then, modify the `insert` method to compare items in `self.storage` to `to_insert` directly using `<`.
 
-### Handle user errors gracefully
-
-Right now, if you try to `pop` or `peek` from an empty queue, an error that's specific to the internal implementation of the queue will bubble up. It would be more helpful to a future consumer of this queue if we handled that error and raised a specific exception that clearly indicates the problem. Here are the [python docs on raising custom exceptions](https://docs.python.org/3/tutorial/errors.html#raising-exceptions).
-
-Add an `EmptyQueueException` and raise it appropriately in `peek` and `pop`. Think of errors that can occur during `insert` and use the same technique of raising a custom exception to handle those gracefully as well. You can make more varieties of specific exceptions.
-
-### Write a better string representation of the queue
-
-The `__str__` method of `PriorityQueue` is not great because it's not very human readable and it would print a very long string if the queue had a lot of items in it. Update it to print a string that is easier to read and provides better insight into the state of the structure. Consider what information a consumer of this queue might want to see when they print it out.
 
 ## Testing / Correctness Improvements
 
