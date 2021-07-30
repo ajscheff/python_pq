@@ -1,19 +1,23 @@
+#!/usr/bin/env python3
+
 import time
+from .colors import colors
+from .errors import EmptyQueueException
 
 
-class colors:
-    RED = '\033[31m'
-    GREEN = '\033[32m'
-    YELLOW = "\033[33m"
-    LIGHTGREY = "\033[37m"
-    ENDC = '\033[0m'
-    BOLD = '\033[1m'
+# class colors:
+#     RED = '\033[31m'
+#     GREEN = '\033[32m'
+#     YELLOW = "\033[33m"
+#     LIGHTGREY = "\033[37m"
+#     ENDC = '\033[0m'
+#     BOLD = '\033[1m'
 
 
-class EmptyQueueException(Exception):
-    def __init__(self, message):
-        self.message = message
-        super().__init__(colors.RED + self.message + colors.ENDC)
+# class EmptyQueueException(Exception):
+#     def __init__(self, message):
+#         self.message = message
+#         super().__init__(colors.RED + self.message + colors.ENDC)
 
 
 class Item:
